@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choi's Main page</title>
+
+    <style>
+       td {padding:10px;}
+       body {background:green;}
+       h1{font-style:italic}
+       h2{color:aquamarine; float:right;}
+       tr{background-color:chocolate}
+       th{font-style:oblique}
+
+    </style>
+</head>
+<body>
+		<div style = font-size:50px;font-style:italic>WEB PROGRAMMING MAIN PAGE</div>
+    <h2>Welcome! {{user.u_id}}<a href="/"><input type = "submit" value ="Logout" /></a></h1>
+    <h3><a href="/search">Go to Search Page </a></h2>
+
+	<table border = "0">
+		<thead>
+			<th>Name</th>
+			<th>e-mail</th>
+			<th>phone addr</th>
+			<th>Fuctions</th>
+		</thead>
+        <br >
+        <br >
+		<tbody>
+			{% for name in person %}
+				<tr>
+					<td>{{name.u_id}}</td>
+					<td>{{name.e_mail}}</td>
+					<td>{{name.phone_number}}</td>
+					<td><a href="/edit/{{name.id}}"><input type = "submit" value ="Edit" /></a> <a href="/delete/{{name.id}}"><input type="submit" value="Delete" /></a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+
+</body>
+</html>

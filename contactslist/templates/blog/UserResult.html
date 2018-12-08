@@ -1,0 +1,43 @@
+
+{% block searchBlock %}
+<style>
+    h1 {
+        color: hotpink;
+    }
+
+    p {
+        color: indigo;
+    }
+
+    input {
+        font-style: oblique;
+    }
+
+    body {
+        background-color: aliceblue;
+    }
+</style>
+    <h1>SEARCH Contact</h1>
+    <form action="" method="get">
+          <p>Enter Name Please</p>
+        <input type="text" name="name" value = {{ name }}>
+        <input type="submit" value="search">
+    </form>
+{% endblock searchBlock %}
+
+{% block content %}
+    <table style="border:1px solid black;">
+        <tr style="border:1px solid black;">
+            <th style="border:1px solid black;">NAME</th>
+            <th style="border:1px solid black;">E-MAIL</th> 
+            <th style="border:1px solid black;">PHONE NUM</th>
+        </tr>
+        {% for contact in contacts %}
+        <tr style="border:1px solid black;">
+            <th style="border:1px solid black;">{{ contact.name }}</th>
+            <th style="border:1px solid black;">{{ contact.e_mail }}</th>
+            <th style="border:1px solid black;">{{ contact.phone_number }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}

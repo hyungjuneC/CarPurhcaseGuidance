@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sign up page</title>
+
+    <style>
+       td {padding:10px;}
+       body {background:green;}
+       h1{font-style:italic}
+       h1{color:aquamarine}
+       tr{background-color:chocolate}
+       th{font-style:oblique}
+
+    </style>
+</head>
+<body>
+    <h1>Sign up!</h1>
+    <h2><a href="/">Go to Main page </a></h2>
+		<h3><a href="/signin">you already have id?</a></h3>
+	<form action="/create" method="post">{% csrf_token %}
+
+	<table border = "0">
+
+		<thead>
+			<th><label for ="ID">ID: <input type="text" name = "ID" id="ID" placeholder="Your ID"></label></th>
+		</thead>
+        <br >
+        <br >
+		<tbody>
+
+				<tr>
+					<td><label for ="Password">Password: <input type="text" name = "password" id="password" placeholder="Your password"></label></td>
+					</td>
+				</tr>
+				<tr>
+					<td>
+								<label for ="e_mail">E-mail: <input type="text" name = "e_mail" id="e_mail" placeholder="asdfgcd@email.com"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+		<label for ="phone_number">Phone-number: <input type="text" name = "phone_number" id="phone_number"placeholder="XXX-XXXX-XXXX"></label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+
+
+		<input type="submit" value="insert" style="font-style:normal; color:darkcyan;font-size:large"/>
+
+</td>
+</tr>
+
+		</tbody>
+</form>
+</body>
+</html>
