@@ -19,24 +19,45 @@
     <h3><a href="/search">Go to Search Page </a></h2>
 
 	<table border = "0">
-		<thead>
-			<th>Name</th>
-			<th>e-mail</th>
-			<th>phone addr</th>
-			<th>Fuctions</th>
-		</thead>
+
         <br >
         <br >
 		<tbody>
-			{% for name in person %}
 				<tr>
-					<td>{{name.u_id}}</td>
-					<td>{{name.e_mail}}</td>
-					<td>{{name.phone_number}}</td>
-					<td><a href="/edit/{{name.id}}"><input type = "submit" value ="Edit" /></a> <a href="/delete/{{name.id}}"><input type="submit" value="Delete" /></a>
-					</td>
+					<td><b>
+						<label for ="fuel_h">Fuel good <input type="checkbox" name = "fuel_h" id="fule_h"></label>
+							</b></td>
+					<td><b>
+						<label for ="fuel_m">Fuel middle <input type="checkbox" name = "fuel_m" id="fule_m"></label>
+							</b></td>
+					<td><b>
+						<label for ="fuel_l">Fuel low <input type="checkbox" name = "fuel_l" id="fule_l"></label>
+							</b></td>
 				</tr>
-			{% endfor %}
+				<tr>
+					<td><b>
+						<label for ="auto">Automatic <input type="checkbox" name = "auto" id="auto"></label>
+							</b></td>
+					<td><b>
+						<label for ="manual">Manual <input type="checkbox" name = "manual" id="manual"></label>
+							</b></td>
+				</tr>
+				<tr>
+					<td><b>
+						<label for ="cate_small">Little car <input type="checkbox" name = "cate_small" id="cate_small"></label>
+							</b></td>
+					<td><b>
+						<label for ="cate_middle">Middle car <input type="checkbox" name = "cate_middle" id="cate_middle"></label>
+							</b></td>
+					<td><b>
+						<label for ="cate_big">Big car <input type="checkbox" name = "cate_big" id="cate_big"></label>
+							</b></td>
+				</tr>
+				<tr>
+					<td><b>
+						<label for ="company">Company: <input type="text" name = "company" id="company"></label>
+							</b></td>
+						</tr>
 		</tbody>
 
 </body>
