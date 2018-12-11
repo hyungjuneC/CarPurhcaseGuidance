@@ -59,6 +59,23 @@
 							</b></td>
 						</tr>
 		</tbody>
+		<tbody>
+			{% for car in carinfo %}
+			<tr>
+				<td>
+					<img src="{{car.car_image}}" width="245">
+				</td>
+				<td>
+					{{car.car_name}}<br>
+					{{car.car_fuel}}<br>
+					{{car.car_Auto}}<br>
+					{{car.car_Cate}}<br>
+					{{car.car_Company}}<br>
+					{{car.car_Country}}<br>
+				</td>
+			</tr>
+								{% endfor %}
+		</tbody>
 
 </body>
 </html>
